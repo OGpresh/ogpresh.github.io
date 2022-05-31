@@ -1,0 +1,325 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+body{
+    margin: 1.5em;
+    font-family: 'Poppins', sans-serif;
+}
+
+a{
+    text-decoration: none;
+    font-size: 1.3rem;
+}
+
+.hero-img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url('../images/1.jpg');
+    background-size: cover;
+    background-position-x: 20%;
+    background-position-y: 20%;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+    animation: introLoad 3s forwards infinite;
+}
+
+.logo{
+    color: white;
+    font-weight: bold;
+    span{
+        color: chocolate;
+        font-weight: lighter;
+    }
+}
+h1{
+    color: white;
+    font-size: 2.5rem;
+    margin-top: 2em;
+    line-height: 3.3rem;
+}
+
+.subhead{
+    font-size: 1.4rem;
+   
+}
+nav{
+    display: none;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+
+    svg{
+        width: 3em;
+        margin-top: -.6em;
+        cursor: pointer;
+        stroke: chocolate;
+         path{
+             fill: chocolate;
+         }
+    }
+}
+
+.btn{
+    display: flex;
+    text-align: center;
+    border-radius: 10px;
+    border: 2px solid chocolate;
+    background: transparent;
+    color: chocolate;
+    font-size: 20px;
+    width: 150px;
+    height: 50px;
+    
+    a{
+        margin: 10px;
+        color: white;
+        
+    }
+    .down{
+        stroke: chocolate;
+        width: 15px;
+        margin: 10px;
+        path{
+            fill: chocolate;
+        }
+    }
+}
+.btn:hover{
+    border: 2px solid rgb(255, 255, 254);
+    color: white;
+}
+
+section.hero{
+    color: white;
+    height: 90vh;
+    animation: moveDown 1s ease-in-out forwards;
+
+    .down-arrow{
+        stroke: chocolate;
+        position: absolute;
+        bottom: .005em;
+        width: 1em;
+        animation: moveArrow 1s alternate-reverse infinite;
+        path{
+            fill: chocolate
+        }
+    }
+}
+.z{
+    color: orange;
+}
+label{
+    color: white;
+}
+input{
+    background: transparent;
+    border: 2px solid chocolate;
+    height: 15px;
+    margin-left: -6px;
+}
+.su{
+    color: chocolate;
+    background: transparent;
+    margin-top: 7px;
+    margin-left: -6px;
+
+}
+
+
+.more-info{
+    img{
+        width: 100%;
+        height: 18rem;
+        object-fit: cover;
+    }
+    .title{
+        font-weight: bold;
+        font-size: 1.25em;
+    }
+    .desc{
+        line-height: 1.5em;
+        span{
+            font-weight: bold;
+            color: rgb(255, 136, 0);
+        }
+    }
+}
+
+@media only screen and (min-width: 680px) {
+    body{
+        margin: 1.5em 5em;
+        font-family: 'Poppins', sans-serif;
+    }
+}
+
+@media only screen and (min-width: 920px){
+    .menu{
+        display: none;
+    }
+    nav{
+        transform: translateX(0);
+        position: unset;
+        display: block;
+        width: auto;
+        height: auto;
+        background: none;
+
+        svg.close{
+            display: none;
+        }
+
+        ul{
+            display: flex;
+            margin: 0;
+
+            li{
+                list-style: none;
+            }
+
+            a{
+                color: white;
+                padding: .5em 1.5em;
+                font-size: 1rem;
+                font-weight: bold;
+
+                &:hover{
+                    background: rgb(197, 103, 15);
+                    color: black;
+                    border-radius: 3px;
+                }
+            }
+        }
+    }
+
+    .hero-img{
+        left: unset;
+        right: 0;
+        width: 50%;
+        height: 33em;
+    }
+
+    .logo{
+        color: #000000;
+
+        span{
+            color: #fa9806;
+        }
+    }
+
+    section.hero{
+        color: #000000;
+        height: auto;
+        width: 40%;
+        margin-bottom: 8em;
+
+        h1{
+            color: #000000;
+        }
+
+        .subhead{
+            font-size: 1rem;
+        }
+
+        svg.down-arrow{
+            position: unset;
+            height: 4rem;
+            margin-top: 8px;
+        }
+
+    }
+
+    .btn .title{
+        color: #fa9806;
+    }
+
+    .btn:hover{
+        color: rgb(14, 14, 14);
+        border: 2px solid #fa9806;
+
+        .title{
+            color: #fa9806;
+        }
+     
+        .down{
+            stroke: rgb(0, 0, 0);
+            width: .8em;
+            padding-left: .8em;
+            
+            path{
+                 fill: rgb(0, 0, 0);
+             }
+        }
+    }
+
+    .feature{
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        gap: 3em;
+        margin-bottom: 8em;
+
+        img{
+            width: 25em;
+            height: 20em;
+        }
+
+        .content{
+            text-align: right;
+            width: 25em;
+        }
+    }
+
+    .feature.left{
+        grid-template-areas: "left right";
+
+        img{
+            grid-area: left;
+        }
+
+        .content{
+            text-align: left;
+            width: 25em;
+            justify-self: left;
+        }
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .wrapper{
+        width: 1200px;
+        margin: 0 auto;
+    }
+
+    .feature{
+        gap: 0;
+    }
+}
+
+@keyframes introLoad {
+    from{
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+    to{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+}
+
+@keyframes moveArrow {
+    from{
+        transform: translateY(-30px);
+    }
+    to{
+        transform: translateY(0);
+    }
+}
+
+@keyframes moveDown {
+    from{
+        transform: translateY(-100px);
+    }
+    to{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

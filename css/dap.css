@@ -1,0 +1,98 @@
+body {
+  background-color: wheat;
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+header .logo {
+  color: blue;
+  margin-top: 5px;
+  font-size: 35px;
+  text-shadow: 2px 3px 2px;
+}
+
+header span {
+  color: black;
+  text-shadow: none;
+}
+
+header svg {
+  width: 45px;
+  margin-top: -45px;
+  margin-right: 6px;
+  cursor: pointer;
+  stroke: black;
+}
+
+header svg path {
+  fill: black;
+}
+
+header svg .wrapper {
+  background-color: cadetblue;
+}
+
+nav {
+  display: none;
+}
+
+.hero-img {
+  background: u;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-size: cover;
+  background-position-x: 20%;
+  background-position-y: 20%;
+  width: 100%;
+  height: 100vh;
+  z-index: -1;
+  opacity: .9;
+}
+
+section h1 {
+  color: black;
+  font-size: 25px;
+  text-align: center;
+  margin-top: 50PX;
+}
+
+section h2 {
+  color: black;
+  text-align: center;
+  margin-top: 15px;
+}
+
+section button {
+  margin-left: 100px;
+  background-color: blue;
+  border: 2px solid #530303;
+  height: 25px;
+  border-radius: 11px;
+}
+
+section a {
+  color: white;
+  text-decoration: none;
+}
+
+section a hover {
+  color: white;
+}
+
+section a.b {
+  color: blue;
+  margin-left: 70px;
+  font-size: larger;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+/*# sourceMappingURL=dap.css.map */

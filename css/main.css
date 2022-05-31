@@ -1,0 +1,367 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+body {
+  margin: 1.5em;
+  font-family: 'Poppins', sans-serif;
+}
+
+a {
+  text-decoration: none;
+  font-size: 1.3rem;
+}
+
+.hero-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: url("../images/1.jpg");
+  background-size: cover;
+  background-position-x: 20%;
+  background-position-y: 20%;
+  width: 100%;
+  height: 100vh;
+  z-index: -1;
+  -webkit-animation: introLoad 3s forwards infinite;
+          animation: introLoad 3s forwards infinite;
+}
+
+.logo {
+  color: white;
+  font-weight: bold;
+}
+
+.logo span {
+  color: chocolate;
+  font-weight: lighter;
+}
+
+h1 {
+  color: white;
+  font-size: 2.5rem;
+  margin-top: 2em;
+  line-height: 3.3rem;
+}
+
+.subhead {
+  font-size: 1.4rem;
+}
+
+nav {
+  display: none;
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+header svg {
+  width: 3em;
+  margin-top: -.6em;
+  cursor: pointer;
+  stroke: chocolate;
+}
+
+header svg path {
+  fill: chocolate;
+}
+
+.btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+  border-radius: 10px;
+  border: 2px solid chocolate;
+  background: transparent;
+  color: chocolate;
+  font-size: 20px;
+  width: 150px;
+  height: 50px;
+}
+
+.btn a {
+  margin: 10px;
+  color: white;
+}
+
+.btn .down {
+  stroke: chocolate;
+  width: 15px;
+  margin: 10px;
+}
+
+.btn .down path {
+  fill: chocolate;
+}
+
+.btn:hover {
+  border: 2px solid #fffffe;
+  color: white;
+}
+
+section.hero {
+  color: white;
+  height: 90vh;
+  -webkit-animation: moveDown 1s ease-in-out forwards;
+          animation: moveDown 1s ease-in-out forwards;
+}
+
+section.hero .down-arrow {
+  stroke: chocolate;
+  position: absolute;
+  bottom: .005em;
+  width: 1em;
+  animation: moveArrow 1s alternate-reverse infinite;
+}
+
+section.hero .down-arrow path {
+  fill: chocolate;
+}
+
+.z {
+  color: orange;
+}
+
+label {
+  color: white;
+}
+
+input {
+  background: transparent;
+  border: 2px solid chocolate;
+  height: 15px;
+  margin-left: -6px;
+}
+
+.su {
+  color: chocolate;
+  background: transparent;
+  margin-top: 7px;
+  margin-left: -6px;
+}
+
+.more-info img {
+  width: 100%;
+  height: 18rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.more-info .title {
+  font-weight: bold;
+  font-size: 1.25em;
+}
+
+.more-info .desc {
+  line-height: 1.5em;
+}
+
+.more-info .desc span {
+  font-weight: bold;
+  color: #ff8800;
+}
+
+@media only screen and (min-width: 680px) {
+  body {
+    margin: 1.5em 5em;
+    font-family: 'Poppins', sans-serif;
+  }
+}
+
+@media only screen and (min-width: 920px) {
+  .menu {
+    display: none;
+  }
+  nav {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    position: unset;
+    display: block;
+    width: auto;
+    height: auto;
+    background: none;
+  }
+  nav svg.close {
+    display: none;
+  }
+  nav ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 0;
+  }
+  nav ul li {
+    list-style: none;
+  }
+  nav ul a {
+    color: white;
+    padding: .5em 1.5em;
+    font-size: 1rem;
+    font-weight: bold;
+  }
+  nav ul a:hover {
+    background: #c5670f;
+    color: black;
+    border-radius: 3px;
+  }
+  .hero-img {
+    left: unset;
+    right: 0;
+    width: 50%;
+    height: 33em;
+  }
+  .logo {
+    color: #000000;
+  }
+  .logo span {
+    color: #fa9806;
+  }
+  section.hero {
+    color: #000000;
+    height: auto;
+    width: 40%;
+    margin-bottom: 8em;
+  }
+  section.hero h1 {
+    color: #000000;
+  }
+  section.hero .subhead {
+    font-size: 1rem;
+  }
+  section.hero svg.down-arrow {
+    position: unset;
+    height: 4rem;
+    margin-top: 8px;
+  }
+  .btn .title {
+    color: #fa9806;
+  }
+  .btn:hover {
+    color: #0e0e0e;
+    border: 2px solid #fa9806;
+  }
+  .btn:hover .title {
+    color: #fa9806;
+  }
+  .btn:hover .down {
+    stroke: black;
+    width: .8em;
+    padding-left: .8em;
+  }
+  .btn:hover .down path {
+    fill: black;
+  }
+  .feature {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (auto)[2];
+        grid-template-columns: repeat(2, auto);
+    gap: 3em;
+    margin-bottom: 8em;
+  }
+  .feature img {
+    width: 25em;
+    height: 20em;
+  }
+  .feature .content {
+    text-align: right;
+    width: 25em;
+  }
+  .feature.left {
+        grid-template-areas: "left right";
+  }
+  .feature.left img {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: left;
+  }
+  .feature.left .content {
+    text-align: left;
+    width: 25em;
+    -ms-grid-column-align: left;
+        justify-self: left;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .wrapper {
+    width: 1200px;
+    margin: 0 auto;
+  }
+  .feature {
+    gap: 0;
+  }
+}
+
+@-webkit-keyframes introLoad {
+  from {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+            clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  }
+  to {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+}
+
+@keyframes introLoad {
+  from {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+            clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  }
+  to {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+}
+
+@-webkit-keyframes moveArrow {
+  from {
+    -webkit-transform: translateY(-30px);
+            transform: translateY(-30px);
+  }
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes moveArrow {
+  from {
+    -webkit-transform: translateY(-30px);
+            transform: translateY(-30px);
+  }
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@-webkit-keyframes moveDown {
+  from {
+    -webkit-transform: translateY(-100px);
+            transform: translateY(-100px);
+  }
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes moveDown {
+  from {
+    -webkit-transform: translateY(-100px);
+            transform: translateY(-100px);
+  }
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+/*# sourceMappingURL=main.css.map */
